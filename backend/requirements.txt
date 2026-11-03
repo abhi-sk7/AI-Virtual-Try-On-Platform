@@ -1,0 +1,40 @@
+# AI Virtual Try-On Platform — Backend Dependencies
+# Python 3.10+ required
+
+# Web Framework
+fastapi==0.115.0
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+
+# Database
+motor==3.7.0
+pymongo==4.12.1
+
+# Validation
+pydantic==2.13.5
+pydantic-settings==2.10.1
+email-validator==2.2.0
+
+# Auth & Security
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.0
+
+# Image Processing
+Pillow==12.3.0
+opencv-python==5.0.0.93
+
+# AI / ML (CPU build — change torch to torch+cu121 for GPU)
+torch==2.14.0
+torchvision==0.29.0
+# For IDM-VTON (requires GPU):
+# diffusers==0.30.0
+# transformers==4.44.0
+# accelerate==0.33.0
+
+# HTTP
+httpx==0.28.0
+aiofiles==24.1.0
+
+# Utilities
+python-dotenv==1.0.1

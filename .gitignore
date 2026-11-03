@@ -1,0 +1,85 @@
+# ============================================================
+# AI Virtual Try-On Platform — .gitignore
+# ============================================================
+
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+pip-wheel-metadata/
+
+# ── Virtual environments ─────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+.virtualenv/
+
+# ── Environment / Secrets (NEVER commit) ─────────────────────
+.env
+.env.local
+.env.production
+.env.*.local
+
+# ── Node / Frontend ──────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/build/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Storage — user-uploaded & generated files ────────────────
+storage/uploads/*
+storage/generated/*
+# Keep directory placeholders
+!storage/uploads/.gitkeep
+!storage/generated/.gitkeep
+# Seed product images are tracked (small, needed for demo)
+!storage/products/
+
+# ── AI Model weights (too large for GitHub) ──────────────────
+models/*.task
+models/*.bin
+models/*.onnx
+models/*.pt
+models/*.pth
+models/*.safetensors
+# Keep the directory and download instructions
+!models/.gitkeep
+!models/README.md
+
+# ── OS / IDE ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Misc ─────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.orig
